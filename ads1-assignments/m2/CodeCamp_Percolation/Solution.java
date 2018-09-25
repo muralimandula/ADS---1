@@ -184,11 +184,11 @@ class PathCompression {
 /**
    * Searches for the first match.
    *
-   * @param      p     index_value
+   * @param      x     index_value
    *
    * @return     {value replaced
    */
-  public int find(int x) {
+  public int find(final int x) {
     int p = x;
     while (p != id[p]) {
       id[p] = id[id[p]];
