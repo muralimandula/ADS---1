@@ -17,7 +17,7 @@
 // You can implement the above API to solve the problem
 
 import java.util.Scanner;
-import java.util.Arrays;
+
 
 /**
  * Percolation class.
@@ -188,7 +188,8 @@ class PathCompression {
    *
    * @return     {value replaced
    */
-  public int find(int p) {
+  public int find(int x) {
+    int p = x;
     while (p != id[p]) {
       id[p] = id[id[p]];
       p = id[p];
