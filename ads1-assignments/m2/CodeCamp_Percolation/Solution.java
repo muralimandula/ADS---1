@@ -112,10 +112,14 @@ class WeightedUnion {
     if (i == j) return;
 
     if (sz[i] < sz[j]) {
-        id[i] = j; sz[j] += sz[i];
+        id[i] = j;
+        sz[j] += sz[i];
     } else {
-        id[j] = i; sz[i] += sz[j]; }
+        id[j] = i;
+        sz[i] += sz[j];
+        }
     }
+
 }
 
 
@@ -135,7 +139,7 @@ public final class Solution {
     while (s.hasNext()) {
       int p = s.nextInt();
       int q = s.nextInt();
-      obj.open(p, q);
+      obj.open(p - 1, q - 1);
     }
     System.out.println(obj.percolates());
   }
