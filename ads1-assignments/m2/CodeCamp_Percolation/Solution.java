@@ -73,9 +73,9 @@ public class Solution {
 			// System.out.println("input");
 			// String[] openingBlock = n.nextLine().split(" ");
 			// obj.openSite(Integer.parseInt(openingBlock[0]), Integer.parseInt(openingBlock[1]));
-			int x = s.nextInt();
-			int y = s.nextInt();
-			obj.openSite(x, y);
+			// int x = s.nextInt();
+			// int y = s.nextInt();
+			obj.openSite(s.nextInt(), s.nextInt());
 
 		}
 
