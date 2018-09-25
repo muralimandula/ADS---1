@@ -23,7 +23,6 @@ class Percolation {
 		grid = new char[n][n];
 	}
 
-
 	public void openSite(final int x, final int y) {
 
 		grid[x - 1][y - 1] = 'X';
@@ -70,43 +69,21 @@ public class Solution {
 		for(char[] eachrow : obj.grid) {
 			int j = 0;
 			for(char eachelement : eachrow) {
-
-				// System.out.println("check");
-
 				obj.grid[i][j] = '-';
 				j++;
-
 			}
 			i++;
 		}
 		System.out.println("\n");
 
-
-		// for(char[] eachrow : obj.grid) {
-
-		// 	for(char eachelement : eachrow) {
-		// 	System.out.print(eachelement + " ");
-		// 	}
-		// 	System.out.println("");
-		// }
-
-		// Scanner n = new Scanner(System.in);
-
 		while(s.hasNext()) {
-			// System.out.println("input");
-			// String[] openingBlock = n.nextLine().split(" ");
-			// obj.openSite(Integer.parseInt(openingBlock[0]), Integer.parseInt(openingBlock[1]));
-			// int x = s.nextInt();
-			// int y = s.nextInt();
 			obj.openSite(s.nextInt(), s.nextInt());
-
 		}
 
 		System.out.println("\n");
 
 
 		for(char[] eachrow : obj.grid) {
-
 			for(char eachelement : eachrow) {
 			System.out.print(eachelement + " ");
 			}
