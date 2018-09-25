@@ -12,80 +12,160 @@
 
 import java.util.*;
 
-
+/**
+ * Percolation class.
+ */
 class Percolation {
 
-
+    /**
+     * boolean array, stores true/false.
+     */
     private boolean[][] grid;
-    private int n;
-    private int count;
-    private int top;
-    private int bottom;
-    private WeightedUnion percCheck;
 
-Percolation(final int num) {
-    grid = new boolean[num][num];
+    /**
+     * Size of the grid, rows*columns.
+     */
+    private int n;
+
+    /**
+     * count.
+     */
+    private int count;
+
+    /**
+     * Top size of the grid.
+     */
+    private int top;
+
+    /**
+     * Bottom of the grid.
+     */
+    private int bottom;
+    /**
+     * Object for Percolate.
+     */
+    private PathCompression objPercolate;
+
+/**
+ * Constructs the object.
+ *
+ * @param      num   The number
+ */
+Percolation(final int gridSize) {
+    grid = new boolean[gridSize][gridSize];
     count = 0;
     top = 0;
-    bottom = num * num + 1;
-    percCheck = new WeightedUnion(num * num + 2);
-    n = num;
+    bottom = gridSize * gridSize + 1;
+    objPercolate = new PathCompression(gridSize * gridSize + 2);
+    n = gridSize;
   }
 
+ /**
+  * Gets the number.
+  *
+  * @param      row   The row
+  * @param      col   The col
+  *
+  * @return     The number.
+  */
  public int getNum(final int row, final int col) {
     return row * n + col + 1;
   }
 
-
+ /**
+  * Turns block site to open site.
+  *
+  * @param      row   The row
+  * @param      col   The col
+  */
  public void open(final int row, final int col) {
     if (!(isOpen(row, col))) {
       grid[row][col] = true;
       count += 1;
     }
     if (row == 0) {
-      percCheck.union(getNum(row, col), top);
+      objPercolate.union(getNum(row, col), top);
     }
     if (row == n - 1) {
-      percCheck.union(getNum(row, col), bottom);
+      objPercolate.union(getNum(row, col), bottom);
     }
     if (col > 0 && isOpen(row, col - 1)) {
-      percCheck.union(getNum(row, col), getNum(row, col - 1));
+      objPercolate.union(getNum(row, col), getNum(row, col - 1));
     }
     if (col < n - 1 && isOpen(row, col + 1)) {
-      percCheck.union(getNum(row, col), getNum(row, col + 1));
+      objPercolate.union(getNum(row, col), getNum(row, col + 1));
     }
     if (row > 0 && isOpen(row - 1, col)) {
-      percCheck.union(getNum(row, col), getNum(row - 1, col));
+      objPercolate.union(getNum(row, col), getNum(row - 1, col));
     }
     if (row < n - 1 && isOpen(row + 1, col)) {
-      percCheck.union(getNum(row, col), getNum(row + 1, col));
+      objPercolate.union(getNum(row, col), getNum(row + 1, col));
     }
     return;
   }
 
+  /**
+   * Determines if open.
+   *
+   * @param      row   The row
+   * @param      col   The col
+   *
+   * @return     True if open, False otherwise.
+   */
    public boolean isOpen(final int row, final int col) {
         return grid[row][col];
   }
 
+  /**
+   * Finds number of open Sites.
+   *
+   * @return     count of open sites.
+   */
   public int numberOfOpenSites() {
          return count;
   }
 
+  /**
+   * Determines if full.
+   *
+   * @param      row   The row
+   * @param      col   The col
+   *
+   * @return     True if full, False otherwise.
+   */
   public boolean isFull(final int row, final int col) {
-        return percCheck.connected(top, (getNum(row, col)));
+        return objPercolate.connected(top, (getNum(row, col)));
   }
 
+  /**
+   * checks whether percoltes.
+   *
+   * @return     true/false.
+   */
   public boolean percolates() {
-        return percCheck.connected(top, bottom);
+        return objPercolate.connected(top, bottom);
   }
 }
 
-class WeightedUnion {
-
+/**
+ * Class for path compression.
+ */
+class PathCompression {
+    /**
+     * array id[].
+     */
     private int[] id;
+    /**
+     * size assessed.
+     */
     private int[] sz;
 
-    WeightedUnion(int number) {
+    /**
+     * Constructs the object.
+     *
+     * @param      number  The number
+     */
+    PathCompression(int number) {
     id = new int[number];
     sz = new int[number];
     for (int i = 0; i < number; i++) {
@@ -94,6 +174,13 @@ class WeightedUnion {
      }
    }
 
+/**
+   * Searches for the first match.
+   *
+   * @param      p     index_value
+   *
+   * @return     {value replaced
+   */
   public int find(int p) {
     while (p != id[p]) {
       id[p] = id[id[p]];
@@ -102,14 +189,30 @@ class WeightedUnion {
     return p;
   }
 
+  /**
+   * Check whether connected.
+   *
+   * @param      p     { parameter_description }
+   * @param      q     The quarter
+   *
+   * @return     { description_of_the_return_value }
+   */
   public boolean connected(final int p, final int q) {
     return find(p) == find(q);
   }
 
+  /**
+   * union method merge.
+   *
+   * @param      p     { parameter_description }
+   * @param      q     The quarter
+   */
   public void union(final int p, final int q) {
     int i = find(p);
     int j = find(q);
-    if (i == j) return;
+    if (i == j) {
+        return;
+    }
 
     if (sz[i] < sz[j]) {
         id[i] = j;
@@ -123,14 +226,23 @@ class WeightedUnion {
 }
 
 
-
+/**
+ * Main class.
+ */
 public final class Solution {
 
-
+    /**
+     * Constructs the object.
+     */
     private Solution() {
     // unused constructor
   }
 
+    /**
+     * Main Function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
     Scanner s = new Scanner(System.in);
     int gridSize = s.nextInt();
