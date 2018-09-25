@@ -15,18 +15,18 @@ import java.util.*;
 
 class Percolation {
 
-	int[][] grid;
+	char[][] grid;
 
 
 	public Percolation(final int n) {
 
-		grid = new int[n][n];
+		grid = new char[n][n];
 	}
 
 
 	public void openSite(final int x, final int y) {
 
-		grid[x - 1][y - 1] = 1;
+		grid[x - 1][y - 1] = 'X';
 	}
 
 	public void printGrid() {
@@ -67,6 +67,15 @@ public class Solution {
 		Percolation obj = new Percolation(noOflines);
 		System.out.println("\n");
 
+		for(char[] eachrow : obj.grid) {
+
+			for(char eachelement : eachrow) {
+
+				eachelement = '-';
+
+			}
+		}
+
 		// Scanner n = new Scanner(System.in);
 
 		while(s.hasNext()) {
@@ -79,9 +88,9 @@ public class Solution {
 
 		}
 
-		for(int[] eachrow : obj.grid) {
+		for(char[] eachrow : obj.grid) {
 
-			for(int eachelement : eachrow) {
+			for(char eachelement : eachrow) {
 			System.out.print(eachelement + " ");
 			}
 			System.out.println("");
