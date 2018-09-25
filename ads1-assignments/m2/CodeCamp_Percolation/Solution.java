@@ -66,15 +66,29 @@ public class Solution {
 		int noOflines = s.nextInt();
 		Percolation obj = new Percolation(noOflines);
 		System.out.println("\n");
-
+		int i = 0;
 		for(char[] eachrow : obj.grid) {
-
+			int j = 0;
 			for(char eachelement : eachrow) {
 
-				eachelement = '-';
+				// System.out.println("check");
+
+				obj.grid[i][j] = '-';
+				j++;
 
 			}
+			i++;
 		}
+		System.out.println("\n");
+
+
+		// for(char[] eachrow : obj.grid) {
+
+		// 	for(char eachelement : eachrow) {
+		// 	System.out.print(eachelement + " ");
+		// 	}
+		// 	System.out.println("");
+		// }
 
 		// Scanner n = new Scanner(System.in);
 
@@ -87,6 +101,9 @@ public class Solution {
 			obj.openSite(s.nextInt(), s.nextInt());
 
 		}
+
+		System.out.println("\n");
+
 
 		for(char[] eachrow : obj.grid) {
 
