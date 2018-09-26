@@ -1,17 +1,21 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
 
+/**
+ * Class for solution.
+ */
+public final class Solution {
 
-public class Solution {
-
-
+  /**
+   * Constructs the object.
+   */
   private Solution() {
     // unused constructor
   }
 
   /**
    * Main function.
-   * Returns the combinational number of equal pairs in the given array.
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
@@ -19,14 +23,13 @@ public class Solution {
     Scanner scan = new Scanner(System.in);
     int noOfInputs = scan.nextInt();
 
-    ArrayList<Integer> repeatCount = new ArrayList<>();
 
     int[] array = new int[noOfInputs];
-    							//An int[] create for given size.
+    						//An int[] created for given size.
 
     for (int i = 0; i < noOfInputs; i++) {
       array[i] = scan.nextInt();
-    }   						//Values inserted into int[].
+    }   					//Values inserted into int[].
 
 
     Arrays.sort(array);
