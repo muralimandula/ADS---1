@@ -52,7 +52,7 @@ class Sorting {
 /**
  * Class for Solution.
  */
-public class Solution {
+public final class Solution {
 
   /**
    * main function.
