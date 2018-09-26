@@ -58,12 +58,7 @@ class Sorting {
  * Class for Solution.
  */
 public final class Solution {
-  /**
-   * Constructs the object.
-   */
-  Solution() {
-    // unused
-  }
+
   /**
    * main function.
    *
