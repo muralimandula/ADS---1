@@ -27,13 +27,15 @@ class Sorting {
     int j = 0;
 
     while (size < newArrLength) {
-      if (i < intArray1.length && j < intArray2.length && intArray1[i] <= intArray2[j]) {
+      if (i < intArray1.length && j < intArray2.length &&
+       intArray1[i] <= intArray2[j]) {
 
         newArray[size] = intArray1[i];
         size += 1;
         i += 1;
       }
-      if (i < intArray1.length && j < intArray2.length && intArray1[i] > intArray2[j]) {
+      if (i < intArray1.length && j < intArray2.length &&
+       intArray1[i] > intArray2[j]) {
         newArray[size] = intArray2[j];
         size += 1;
         j += 1;
@@ -59,7 +61,7 @@ public final class Solution {
   /**
    * Constructs the object.
    */
-  private Solution() {
+  Solution() {
     // unused
   }
   /**
