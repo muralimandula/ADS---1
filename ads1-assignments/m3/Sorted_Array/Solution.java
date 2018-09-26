@@ -48,7 +48,7 @@ class Sorting {
       }
 
     }
-    System.out.println(Arrays.toString(newArray).replaceAll("[][ ]", ""));
+    System.out.println(Arrays.toString(newArray).replaceAll("[\\]\\[ ]", ""));
   }
 }
 
