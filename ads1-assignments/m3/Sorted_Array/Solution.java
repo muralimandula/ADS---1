@@ -5,12 +5,7 @@ import java.util.Arrays;
  * Class for sorted.
  */
 class Sorting {
-  /**
-   * Constructs the object.
-   */
-  Sorting() {
-    // unused
-  }
+
 
   /**
    * Adds an arr.
@@ -27,15 +22,15 @@ class Sorting {
     int j = 0;
 
     while (size < newArrLength) {
-      if (i < intArray1.length && j < intArray2.length &&
-       intArray1[i] <= intArray2[j]) {
+      if (i < intArray1.length && j < intArray2.length
+       && intArray1[i] <= intArray2[j]) {
 
         newArray[size] = intArray1[i];
         size += 1;
         i += 1;
       }
-      if (i < intArray1.length && j < intArray2.length &&
-       intArray1[i] > intArray2[j]) {
+      if (i < intArray1.length && j < intArray2.length
+       && intArray1[i] > intArray2[j]) {
         newArray[size] = intArray2[j];
         size += 1;
         j += 1;
@@ -57,7 +52,7 @@ class Sorting {
 /**
  * Class for Solution.
  */
-public final class Solution {
+public class Solution {
 
   /**
    * main function.
@@ -66,8 +61,6 @@ public final class Solution {
    */
   public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
-
-    Sorting obj = new Sorting();
 
     int size1 = Integer.parseInt(scan.nextLine());
     int size2 = Integer.parseInt(scan.nextLine());
@@ -93,6 +86,6 @@ public final class Solution {
       }
     }
 
-    obj.addArr(intarray1, intarray2);
+    Sorting.addArr(intarray1, intarray2);
   }
 }
