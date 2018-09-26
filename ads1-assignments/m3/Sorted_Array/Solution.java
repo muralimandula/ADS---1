@@ -7,6 +7,11 @@ import java.util.Arrays;
 class Sorting {
 
 
+  Sorting() {
+
+  }
+
+
   /**
    * Adds an arr.
    *
@@ -53,6 +58,13 @@ class Sorting {
  * Class for Solution.
  */
 public final class Solution {
+
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
 
   /**
    * main function.
