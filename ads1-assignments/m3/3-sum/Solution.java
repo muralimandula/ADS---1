@@ -25,40 +25,40 @@ public final class Solution {
 
 
     int[] array = new int[noOfInputs];
-    						//An int[] created for given size.
+                            //An int[] created for given size.
 
     for (int i = 0; i < noOfInputs; i++) {
       array[i] = scan.nextInt();
-    }   					//Values inserted into int[].
+    }                       //Values inserted into int[].
 
 
     Arrays.sort(array);
 
     int count = 0;
 
-    for(int initial = 0; initial < noOfInputs; initial++) {
+    for (int initial = 0; initial < noOfInputs; initial++) {
 
-    	int last = noOfInputs - 1;
+        int last = noOfInputs - 1;
 
-    	int i = 0;
+        int i = 0;
 
-    	int initialElement = array[initial];
+        int initialElement = array[initial];
 
-    	while ( i != initial && last != initial) {
+        while (i != initial && last != initial) {
 
-    		int threeSum = array[i] + array[last];
+            int threeSum = array[i] + array[last];
 
-    		if (threeSum + initialElement > 0) {
-    			last -= 1;
+            if (threeSum + initialElement > 0) {
+                last -= 1;
 
-    		} else if (threeSum + initialElement < 0) {
-    			i += 1;
+            } else if (threeSum + initialElement < 0) {
+                i += 1;
 
-    		} else {
-    			count += 1;
-    			i++;
-    		}
-    	}
+            } else {
+                count += 1;
+                i++;
+            }
+        }
 
     }
 
