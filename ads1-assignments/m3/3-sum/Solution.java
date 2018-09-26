@@ -35,7 +35,7 @@ public class Solution {
 
     for(int initial = 0; initial < noOfInputs; initial++) {
 
-    	int last = noOfInputs;
+    	int last = noOfInputs - 1;
 
     	int i = 0;
 
