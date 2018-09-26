@@ -4,9 +4,11 @@ import java.util.Arrays;
 /**
  * Class for sorted.
  */
-class Sorting {
+final class Sorting {
 
-
+  /**
+   * Constructs the object.
+   */
   private Sorting() {
 
   }
