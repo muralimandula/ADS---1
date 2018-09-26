@@ -7,7 +7,7 @@ import java.util.Arrays;
 class Sorting {
 
 
-  Sorting() {
+  private Sorting() {
 
   }
 
