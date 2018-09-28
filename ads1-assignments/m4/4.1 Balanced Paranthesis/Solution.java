@@ -32,7 +32,7 @@ class BalancedParanthesis {
 
     for (char c : parenthesis) {
 
-      if (c == '[' || c == '(') {
+      if (c == '[' || c == '(' || c == '{') {
         stackOfBrackets.push(c);
       } else if (c == ']') {
 
