@@ -30,7 +30,7 @@ class BalancedParanthesis {
    */
   public boolean isBalanced() {
 
-    for (char c : parenthesis ) {
+    for (char c : parenthesis) {
 
       if (c == '[' || c == '(') {
         stackOfBrackets.push(c);
