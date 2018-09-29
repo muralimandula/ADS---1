@@ -6,7 +6,9 @@ import java.util.Iterator;
  * Class for add large numbers.
  */
 final class AddLargeNumbers {
-
+    /**
+     * Constructs the object.
+     */
     private AddLargeNumbers() {
         //unused constructor.
     }
@@ -37,7 +39,7 @@ final class AddLargeNumbers {
     public static String digitsToNumber(final LinkedList list) {
         String string = "";
         Iterator iterator = list.iterator();
-            // Iterator implements linked list as For-each.
+            // Iterator implements linked list as For-each. #Simplified.
 
             // We can even use "node.next != null", to iterate.
         while (iterator.hasNext()) {
@@ -63,6 +65,11 @@ final class AddLargeNumbers {
                                                 final LinkedList list2) {
 
         LinkedList<Integer> additionList = new LinkedList<Integer>();
+
+        int number1 = Integer.parseInt(digitsToNumber(list1));
+        int number2 = Integer.parseInt(digitsToNumber(list2));
+        additionList.add(number1 + number2);
+
 
 
 
