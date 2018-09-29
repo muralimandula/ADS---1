@@ -1,14 +1,14 @@
 import java.util.Scanner;
 import java.util.LinkedList;
-import java.util.*;
+import java.util.Iterator;
 
 /**
  * Class for add large numbers.
  */
-class AddLargeNumbers {
+final class AddLargeNumbers {
 
     private AddLargeNumbers() {
-
+        //unused constructor.
     }
 
     /**
@@ -74,10 +74,13 @@ class AddLargeNumbers {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 
+    /**
+     * Constructs the object.
+     */
     private Solution() {
-
+        //unused constructor.
     }
 
     /**
