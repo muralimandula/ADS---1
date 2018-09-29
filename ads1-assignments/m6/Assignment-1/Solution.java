@@ -7,20 +7,24 @@ import java.util.*;
  */
 class AddLargeNumbers {
 
-	/**
-	 * LinkedList of digits from given string.
-	 *
-	 * @param      number  String from the input.
-	 *
-	 * @return     a  linked list of integrs/digits.
-	 */
+    private AddLargeNumbers() {
+
+    }
+
+    /**
+     * LinkedList of digits from given string.
+     *
+     * @param      number  String from the input.
+     *
+     * @return     a  linked list of integrs/digits.
+     */
     public static LinkedList numberToDigits(final String number) {
-    	LinkedList<Integer> integerList = new LinkedList<Integer>();
-    	for (int i = 0; i < number.length(); i++) {
-    		int digit = Integer.parseInt(String.valueOf(number.charAt(i)));
-    	    integerList.add(digit);
-    	}
-    	return integerList;
+        LinkedList<Integer> integerList = new LinkedList<Integer>();
+        for (int i = 0; i < number.length(); i++) {
+            int digit = Integer.parseInt(String.valueOf(number.charAt(i)));
+            integerList.add(digit);
+        }
+        return integerList;
     }
 
     /**
@@ -31,20 +35,19 @@ class AddLargeNumbers {
      * @return     String format of digits in inked list.
      */
     public static String digitsToNumber(final LinkedList list) {
-    	String string = "";
-		Iterator iterator = list.iterator();
-			// Iterator implements linked list as For-each.
+        String string = "";
+        Iterator iterator = list.iterator();
+            // Iterator implements linked list as For-each.
 
-			// We can even use "node.next != null", to iterate.
-	    while(iterator.hasNext())
-	    	// hasNext() is equivalent to "node.next != null"
-	    {
-	      string += iterator.next();
-	    	// iterator.next() returns each value in the list.
-	    }
+            // We can even use "node.next != null", to iterate.
+        while (iterator.hasNext()) {
+            // hasNext() is equivalent to "node.next != null"
+          string += iterator.next();
+            // iterator.next() returns each value in the list.
+        }
 
 
-    	return string;
+        return string;
 
     }
 
@@ -57,23 +60,37 @@ class AddLargeNumbers {
      * @return     returns the reusultant linkedList.
      */
     public static LinkedList addLargeNumbers(final LinkedList list1,
-    										 	final LinkedList list2) {
+                                                final LinkedList list2) {
 
-    	LinkedList<Integer> additionList = new LinkedList<Integer>();
+        LinkedList<Integer> additionList = new LinkedList<Integer>();
 
 
 
- 		return additionList;
+        return additionList;
     }
 }
 
+
+/**
+ * Class for solution.
+ */
 public class Solution {
-    public static void main(String[] args) {
+
+    private Solution() {
+
+    }
+
+    /**
+     * Main Function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
         String q = sc.nextLine();
-        switch(input){
+        switch (input) {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
@@ -82,10 +99,14 @@ public class Solution {
                 break;
 
             case "addLargeNumbers":
-     			pDigits = AddLargeNumbers.numberToDigits(p);
+                pDigits = AddLargeNumbers.numberToDigits(p);
                 qDigits = AddLargeNumbers.numberToDigits(q);
-                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+                LinkedList result = AddLargeNumbers.addLargeNumbers(
+                                                        pDigits, qDigits);
                 System.out.println(AddLargeNumbers.digitsToNumber(result));
+                break;
+
+            default:
                 break;
         }
     }
