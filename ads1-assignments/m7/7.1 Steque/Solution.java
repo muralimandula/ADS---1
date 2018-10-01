@@ -7,8 +7,14 @@ public class Solution {
 		int n = Integer.parseInt(scan.nextLine());
 		Steque steque = new Steque();
 
+		for(int i = 0; i < n; i++) {
+
 		while (scan.hasNext()) {
 		String[] command = scan.nextLine().split(" ");
+
+			if (command.length == 0) {
+				break;
+			}
 
 			switch(command[0]) {
 
@@ -34,7 +40,9 @@ public class Solution {
 				default:
 					break;
 			}
-
 		}
+
+		System.out.println("");
+	}
 	}
 }
