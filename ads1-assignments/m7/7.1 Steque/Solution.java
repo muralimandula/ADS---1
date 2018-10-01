@@ -4,21 +4,17 @@ import java.util.Scanner;
 public class Solution {
 	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
-
 		int n = Integer.parseInt(scan.nextLine());
-
 		Steque steque = new Steque();
 
-
 		while (scan.hasNext()) {
-
 		String[] command = scan.nextLine().split(" ");
-
 
 			switch(command[0]) {
 
 				case "push":
 					steque.push(Integer.parseInt(command[1]));
+					System.out.println(steque.convertString());
 					break;
 
 				case "pop":
