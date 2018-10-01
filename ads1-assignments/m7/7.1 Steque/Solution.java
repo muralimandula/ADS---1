@@ -18,7 +18,7 @@ public final class Solution {
      *
      * @param      args       The arguments
      *
-     * @throws     Exception  { exception_description }
+     * @throws     Exception  When it encounters an empty Steque.
      */
     public static void main(final String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
@@ -50,6 +50,8 @@ public final class Solution {
                             steque.pop();
                             System.out.println(steque.convertString());
                         } catch (Exception e) {
+
+                            //Exception caught on empty Steque.
                             System.out.println(e.getMessage());
                            }
                         break;
