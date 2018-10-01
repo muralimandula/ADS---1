@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final public class Solution {
 
 
     /**
