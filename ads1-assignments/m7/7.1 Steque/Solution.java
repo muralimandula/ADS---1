@@ -1,52 +1,69 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-
+/**
+ * Class for solution.
+ */
 public class Solution {
-	public static void main(String[] args) throws Exception {
-		Scanner scan = new Scanner(System.in);
-		int n = Integer.parseInt(scan.nextLine());
-
-		for(int i = 0; i < n; i++) {
-
-			Steque steque = new Steque();
-
-			while (scan.hasNext()) {
-				String input = scan.nextLine();
-
-				if (input.length() == 0) {
-					break;
-				}
-
-				String[] command = input.split(" ");
 
 
-				switch(command[0]) {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused constructor.
+    }
 
-					case "push":
-						steque.push(Integer.parseInt(command[1]));
-						System.out.println(steque.convertString());
-						break;
+    /**
+     * Main Function.
+     *
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
+     */
+    public static void main(final String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        int n = Integer.parseInt(scan.nextLine());
 
-					case "pop":
-	                    try {
-							steque.pop();
-	                        System.out.println(steque.convertString());
-	                    } catch (Exception e) {
-	                        System.out.println(e.getMessage());
-	                       }
-						break;
+        for (int i = 0; i < n; i++) {
 
-					case "enqueue":
-						steque.enqueue(Integer.parseInt(command[1]));
-						System.out.println(steque.convertString());
-						break;
+            Steque steque = new Steque();
 
-					default:
-						break;
-				}
-			}
-			System.out.println();
-			}
-		}
+            while (scan.hasNext()) {
+                String input = scan.nextLine();
+
+                if (input.length() == 0) {
+                    break;
+                }
+
+                String[] command = input.split(" ");
+
+
+                switch (command[0]) {
+
+                    case "push":
+                        steque.push(Integer.parseInt(command[1]));
+                        System.out.println(steque.convertString());
+                        break;
+
+                    case "pop":
+                        try {
+                            steque.pop();
+                            System.out.println(steque.convertString());
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage());
+                           }
+                        break;
+
+                    case "enqueue":
+                        steque.enqueue(Integer.parseInt(command[1]));
+                        System.out.println(steque.convertString());
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            System.out.println();
+            }
+        }
 }
