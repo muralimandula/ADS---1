@@ -24,7 +24,7 @@ public class Solution {
 				case "pop":
                     try {
 						steque.pop();
-                        System.out.println(steque);
+                        System.out.println(steque.convertString());
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                        }
@@ -32,7 +32,7 @@ public class Solution {
 
 				case "enqueue":
 					steque.enqueue(Integer.parseInt(command[1]));
-					System.out.println(steque);
+					System.out.println(steque.convertString());
 					break;
 
 				default:
