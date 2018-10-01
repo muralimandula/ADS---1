@@ -30,7 +30,7 @@ class Steque <Generic> {
 	}
 
 	public Generic pop() throws Exception {
-		if (head == null) throw new Exception("Stack is Empty");
+		if (head == null) throw new Exception("Steque is empty.");
 		Generic data = head.data;
 		head = head.next;
 		return data;
@@ -46,7 +46,7 @@ class Steque <Generic> {
 	}
 
 	public String convertString() throws Exception {
-		if (head == null) throw new Exception("Stack is Empty");
+		if (head == null) throw new Exception("Steque is empty.");
 		String str = "";
 
 
