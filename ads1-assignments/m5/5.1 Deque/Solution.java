@@ -117,6 +117,23 @@ public int getSize() {
     return size;
 }
 
+public String toString() {
+
+    String output = "[";
+
+    if (head == null) {
+        return "[]";
+    } else {
+        Node tempNodeOut = head;
+
+        while (tempNodeOut.next != null) {
+            output += tempNodeOut.data + "," ;
+            tempNodeOut = tempNodeOut.next;
+        }
+        output += tempNodeOut.data;
+    }
+    return output;
+}
 
 }
 
