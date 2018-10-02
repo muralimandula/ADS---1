@@ -46,7 +46,7 @@ private class Node {
      * Constructs the object.
      *
      * @param      nodeData  The node data
-     * @param      node      The next node
+     * @param      nextNode  The next node
      */
     Node(final Generic nodeData, final Node nextNode) {
         this.data = nodeData;
@@ -61,6 +61,9 @@ private class Node {
 
     }
 
+    /**
+     * Head and tail representing ends of deque.
+     */
     private Node head, tail; // values are null when created.
     /**
      * size of the deque.
@@ -72,7 +75,7 @@ private class Node {
      *
      * @param      data  The data
      */
-    public void pushLeft( final Generic data) {
+    public void pushLeft(final Generic data) {
 
         if (head == null) {
 
@@ -155,7 +158,7 @@ public Generic popRight() {
 
         Node tempNode = head; //just uses to display/return.
 
-        while(tempNode.next != tail) {
+        while (tempNode.next != tail) {
             tempNode = tempNode.next;
                     // moving towards right, till you reach tail.
         }
