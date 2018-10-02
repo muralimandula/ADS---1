@@ -3,38 +3,76 @@ import java.util.Scanner;
 
 
 
-
+/**
+ * Class for deque.
+ *
+ * @param      <Generic>  The generic
+ */
 class Deque<Generic> {
 
+
+/**
+ * Class for node.
+ */
 private class Node {
 
-    Generic data;
-    Node next;
+    /**
+     * Data for generic type.
+     */
+    private Generic data;
 
+    /**
+     * next/reference  of the next node.
+     */
+    private Node next;
+
+    /**
+     * Constructs the object.
+     */
     Node() {
 
     }
 
-    Node(Generic data) {
+    /**
+     * constructor for adding a node.
+     *
+     * @param      nodeData  The node data
+     */
+    Node(final Generic nodeData) {
         this.data = data;
     }
 
-    Node(Generic data, Node node) {
+    /**
+     * Constructs the object.
+     *
+     * @param      nodeData  The node data
+     * @param      node      The next node
+     */
+    Node(final Generic nodeData, final Node node) {
         this.data = data;
         this.next = node;
     }
 }
 
-
+    /**
+     * Constructs the object.
+     */
     Deque() {
 
     }
 
-    Node head, tail; // values are null when created.
+    private Node head, tail; // values are null when created.
+    /**
+     * size of the deque.
+     */
+    private int size;   //No value assigned when created.
 
-    int size;   //No value assigned when created.
-
-    public void pushLeft(Generic data) {
+    /**
+     * Pushes a left.. adding at tail.
+     *
+     * @param      data  The data
+     */
+    public void pushLeft( final Generic data) {
 
         if (head == null) {
 
@@ -56,7 +94,12 @@ private class Node {
         }
     }
 
-public void pushRight(Generic data) {
+/**
+ * Pushes a right.. adding at head.
+ *
+ * @param      data  The data
+ */
+public void pushRight(final Generic data) {
 
         if (head == null) {
 
@@ -80,6 +123,11 @@ public void pushRight(Generic data) {
     }
 
 
+/**
+ * Removing first element/head.
+ *
+ * @return     returns popped element.
+ */
 public Generic popLeft() {
 
     if (head == null) {
@@ -93,6 +141,11 @@ public Generic popLeft() {
     }
 }
 
+/**
+ * Removing last element/tail.
+ *
+ * @return     returns popped element.
+ */
 public Generic popRight() {
 
     if (head == null) {
@@ -115,10 +168,20 @@ public Generic popRight() {
     }
 }
 
+/**
+ * Gets the size.
+ *
+ * @return     The size.
+ */
 public int getSize() {
     return size;
 }
 
+/**
+ * Returns a string representation of the object.
+ *
+ * @return     String representation of the object.
+ */
 public String toString() {
 
     String output = "[";
@@ -129,7 +192,7 @@ public String toString() {
         Node tempNodeOut = head;
 
         while (tempNodeOut.next != null) {
-            output += tempNodeOut.data + ", " ;
+            output += tempNodeOut.data + ", ";
             tempNodeOut = tempNodeOut.next;
         }
         output += tempNodeOut.data + "]";
