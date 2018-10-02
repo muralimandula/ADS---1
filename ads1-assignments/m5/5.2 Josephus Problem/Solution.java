@@ -31,8 +31,8 @@ class JosephProblem {
      * @param      eliminationOn  The elimination on
      */
     JosephProblem(final int gameSize, final int eliminationOn) {
-        size = gameSize;
-        eliminationCount = eliminationOn;
+        this.size = gameSize;
+        this.eliminationCount = eliminationOn;
     }
 
     /**
