@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 
 
-
+/**
+ * Class for joseph problem.
+ */
 class JosephProblem {
 
-    int size;
-    int eliminationCount;
-    Node head, tail;
-    String output = "";
+    private int size;
+    private int eliminationCount;
+    private Node head, tail;
+    private String output = "";
 
     /**
      * Constructs the object.
@@ -16,7 +18,7 @@ class JosephProblem {
      * @param      gameSize       The game size
      * @param      eliminationOn  The elimination on
      */
-    JosephProblem(int gameSize, int eliminationOn) {
+    JosephProblem(final int gameSize, final int eliminationOn) {
         size = gameSize;
         eliminationCount = eliminationOn;
     }
@@ -25,8 +27,16 @@ class JosephProblem {
      * Class for Node.
      */
     private class Node {
-        int data;
-        Node next;
+
+        /**
+         * position value.
+         */
+        private int data;
+
+        /**
+         * Next position.
+         */
+        private Node next;
 
 
         /**
@@ -34,7 +44,7 @@ class JosephProblem {
          *
          * @param      position  The position
          */
-        Node(int position) {
+        Node(final int position) {
             data = position;
         }
     }
@@ -83,7 +93,7 @@ class JosephProblem {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 
     /**
      * Constructs the object.
@@ -106,8 +116,9 @@ public class Solution {
 
             String[] josephSays = scan.nextLine().split(" ");
 
-            JosephProblem problem = new JosephProblem(Integer.parseInt(josephSays[0]),
-                Integer.parseInt(josephSays[1]));
+            JosephProblem problem = new JosephProblem(
+                            Integer.parseInt(josephSays[0]),
+                                Integer.parseInt(josephSays[1]));
             problem.getResult();
         }
     }
