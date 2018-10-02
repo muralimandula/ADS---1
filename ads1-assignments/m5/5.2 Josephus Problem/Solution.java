@@ -7,9 +7,21 @@ import java.util.Scanner;
  */
 class JosephProblem {
 
+    /**
+     * Size of the persons, n.
+     */
     private int size;
+    /**
+     * Elimination postion, m.
+     */
     private int eliminationCount;
+    /**
+     * Head and tail as they are in circle.
+     */
     private Node head, tail;
+    /**
+     * string format of the reulst.
+     */
     private String output = "";
 
     /**
