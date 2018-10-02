@@ -39,7 +39,7 @@ private class Node {
      * @param      nodeData  The node data
      */
     Node(final Generic nodeData) {
-        this.data = data;
+        this.data = nodeData;
     }
 
     /**
@@ -48,9 +48,9 @@ private class Node {
      * @param      nodeData  The node data
      * @param      node      The next node
      */
-    Node(final Generic nodeData, final Node node) {
-        this.data = data;
-        this.next = node;
+    Node(final Generic nodeData, final Node nextNode) {
+        this.data = nodeData;
+        this.next = nextNode;
     }
 }
 
