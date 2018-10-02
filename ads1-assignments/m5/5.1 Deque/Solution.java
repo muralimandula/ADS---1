@@ -106,10 +106,12 @@ public Generic popRight() {
             tempNode = tempNode.next;
                     // moving towards right, till you reach tail.
         }
+        Generic popped = tempNode.next.data;
         // now tempNode is last but one in the queue.
         tail = tempNode; // now tail is last but one.
+        tail.next = null;
         size--;
-        return tempNode.next.data;
+        return popped;
     }
 }
 
@@ -127,10 +129,10 @@ public String toString() {
         Node tempNodeOut = head;
 
         while (tempNodeOut.next != null) {
-            output += tempNodeOut.data + "," ;
+            output += tempNodeOut.data + ", " ;
             tempNodeOut = tempNodeOut.next;
         }
-        output += tempNodeOut.data;
+        output += tempNodeOut.data + "]";
     }
     return output;
 }
