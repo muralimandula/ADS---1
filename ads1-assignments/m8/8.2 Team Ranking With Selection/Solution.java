@@ -8,19 +8,19 @@ class Team implements Comparable<Team> {
   /**
    * team name.
    */
-  String teamName;
+  private String teamName;
   /**
    * wins for the team.
    */
-  int wins;
+  private int wins;
   /**
    * losses for the team.
    */
-  int losses;
+  private int losses;
   /**
    * draws for the team.
    */
-  int draws;
+  private int draws;
 
   /**
    * Constructs the object.
@@ -49,25 +49,24 @@ class Team implements Comparable<Team> {
    *             -1 if lesser.
    */
   public int compareTo(final Team other) {
-    if(this.wins > other.wins) {
+    if (this.wins > other.wins) {
      return 1;
     }
-    if(this.wins < other.wins) {
+    if (this.wins < other.wins) {
         return -1;
     }
-    if(this.losses < other.losses) {
+    if (this.losses < other.losses) {
         return 1;
     }
-    if(this.losses > other.losses) {
+    if (this.losses > other.losses) {
         return -1;
     }
-    if(this.draws > other.draws) {
+    if (this.draws > other.draws) {
         return 1;
     }
-    if(this.draws < other.draws) {
+    if (this.draws < other.draws) {
         return -1;
-    }
-    else {
+    }else {
         return 0;
      }
     }
@@ -91,7 +90,7 @@ class InsertionSortTeam {
     /**
      * Constructs the object.
      */
-    InsertionSortTeam() {
+    private InsertionSortTeam() {
         //dummy constructor.
     }
   /**
