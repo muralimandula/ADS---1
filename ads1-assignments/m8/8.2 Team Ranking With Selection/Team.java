@@ -40,6 +40,7 @@ public class Team implements Comparable<Team> {
   		if (this.wins > team2.wins) {
   			return 1;
   		}
+  		if (this.draws > team2.draws) return 1;
  		return 0;
   	}
 
@@ -54,8 +55,11 @@ public class Team implements Comparable<Team> {
 class SelectionSortTeam {
 
 	static void sort(Comparable[] teams, int size) {
+
 		for(int i = 0; i < size; i++) {
+
 			int minimumPosition = i;
+
 			for(int j = i + 1; j < size; j++) {
 
 				if(teams[j].compareTo(teams[minimumPosition]) > 0) {
