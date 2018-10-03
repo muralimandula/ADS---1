@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 /**
  * Class for team object.
@@ -33,10 +32,10 @@ class Team implements Comparable<Team> {
    */
   Team(final String nameOftheTeam, final int noOFwins,
                  final int noOflosses, final int noOfdraws) {
-    teamName = nameOftheTeam;
-    wins = noOFwins;
-    losses = noOflosses;
-    draws = noOfdraws;
+    this.teamName = nameOftheTeam;
+    this.wins = noOFwins;
+    this.losses = noOflosses;
+    this.draws = noOfdraws;
   }
 
   /**
@@ -49,15 +48,29 @@ class Team implements Comparable<Team> {
    *             0 if equal.
    *             -1 if lesser.
    */
-  public int compareTo (Team other) {
-    if (this.wins > other.wins) return 1;
-    if (this.wins < other.wins) return -1;
-    if (this.losses < other.losses) return 1;
-    if (this.losses > other.losses) return -1;
-    if (this.draws > other.draws) return 1;
-    if (this.draws < other.draws) return -1;
-    else return 0;
-  }
+  public int compareTo(final Team other) {
+    if(this.wins > other.wins) {
+     return 1;
+    }
+    if(this.wins < other.wins) {
+        return -1;
+    }
+    if(this.losses < other.losses) {
+        return 1;
+    }
+    if(this.losses > other.losses) {
+        return -1;
+    }
+    if(this.draws > other.draws) {
+        return 1;
+    }
+    if(this.draws < other.draws) {
+        return -1;
+    }
+    else {
+        return 0;
+     }
+    }
 
   /**
    * Returns a string representation of the object.
@@ -74,6 +87,13 @@ class Team implements Comparable<Team> {
  * Class for insertion sort of teams.
  */
 class InsertionSortTeam {
+
+    /**
+     * Constructs the object.
+     */
+    InsertionSortTeam() {
+        //dummy constructor.
+    }
   /**
    * To check if the object is greater.
    *
@@ -83,7 +103,7 @@ class InsertionSortTeam {
    * @return     returns true if team 1 is greater than
    * team 2 on the leader board.
    */
-  static boolean more (Comparable a, Comparable b) {
+  static boolean more(final Comparable a, final Comparable b) {
     return a.compareTo(b) > 0;
   }
 
@@ -94,7 +114,7 @@ class InsertionSortTeam {
    * @param      i     Object 1.
    * @param      j     Object 2.
    */
-  static void swap (Comparable[] a, final int i, final int j) {
+  static void swap(final Comparable[] a, final int i, final int j) {
     Comparable temp = a[i];
     a[i] = a[j];
     a[j] = temp;
@@ -110,7 +130,7 @@ class InsertionSortTeam {
    * @param      teamObjectArr   The array of objects/teams.
    * @param      size  The number of objects in the array.
    */
-  static void sort(Comparable[] teamObjectArr, final int size) {
+  static void sort(final Comparable[] teamObjectArr, final int size) {
 
     for (int i = 0; i < size; i++) {
       for (int j = i; j > 0; j--) {
@@ -131,12 +151,12 @@ public final class Solution {
   /**
    * Avoid magic numbers.
    */
-  final static int THREE = 3;
+  static final int THREE = 3;
 
   /**
    * Avoid magic numbers.
    */
-  final static int TEN = 10;
+  static final int TEN = 10;
 
   /**
    * Constructs the object.
