@@ -31,7 +31,8 @@ class Team implements Comparable<Team> {
    * @param      noOflosses     No oflosses
    * @param      noOfdraws      No ofdraws
    */
-  Team(final String nameOftheTeam, final int noOFwins, final int noOflosses, final int noOfdraws) {
+  Team(final String nameOftheTeam, final int noOFwins,
+                 final int noOflosses, final int noOfdraws) {
     teamName = nameOftheTeam;
     wins = noOFwins;
     losses = noOflosses;
@@ -93,7 +94,7 @@ class InsertionSortTeam {
    * @param      i     Object 1.
    * @param      j     Object 2.
    */
-  static void swap (Comparable[] a, int i, int j) {
+  static void swap (Comparable[] a, final int i, final int j) {
     Comparable temp = a[i];
     a[i] = a[j];
     a[j] = temp;
@@ -109,7 +110,7 @@ class InsertionSortTeam {
    * @param      teamObjectArr   The array of objects/teams.
    * @param      size  The number of objects in the array.
    */
-  static void sort(Comparable[] teamObjectArr, int size) {
+  static void sort(Comparable[] teamObjectArr, final int size) {
 
     for (int i = 0; i < size; i++) {
       for (int j = i; j > 0; j--) {
@@ -127,9 +128,15 @@ class InsertionSortTeam {
  * Class for Solution.
  */
 public final class Solution {
+  /**
+   * Avoid magic numbers.
+   */
+  final static int THREE = 3;
 
-  final static int three = 3;
-  final static int ten = 10;
+  /**
+   * Avoid magic numbers.
+   */
+  final static int TEN = 10;
 
   /**
    * Constructs the object.
@@ -146,7 +153,8 @@ public final class Solution {
    *
    * @return     { description_of_the_return_value }
    */
-  public static String leaderBoard(final Team[] teamsTOCompare, final int sizeOfteams) {
+  public static String leaderBoard(final Team[] teamsTOCompare,
+                                         final int sizeOfteams) {
 
     InsertionSortTeam.sort(teamsTOCompare, sizeOfteams);
 
@@ -168,7 +176,7 @@ public final class Solution {
 
     Scanner scan = new Scanner(System.in);
 
-    Team[] teams = new Team[ten];
+    Team[] teams = new Team[TEN];
     int size = 0;
 
     while (scan.hasNext()) {
@@ -176,7 +184,7 @@ public final class Solution {
       Team temp = new Team(teamRecord[0],
                            Integer.parseInt(teamRecord[1]),
                            Integer.parseInt(teamRecord[2]),
-                           Integer.parseInt(teamRecord[three]));
+                           Integer.parseInt(teamRecord[THREE]));
       teams[size] = temp;
       size += 1;
     }
