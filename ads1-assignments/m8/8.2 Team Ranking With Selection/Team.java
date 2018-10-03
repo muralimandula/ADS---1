@@ -40,7 +40,24 @@ public class Team implements Comparable<Team> {
   		if (this.wins > team2.wins) {
   			return 1;
   		}
-  		if (this.draws > team2.draws) return 1;
+  		if (this.wins < team2.wins) {
+  			return -1;
+  		}
+  		 		// if code above doesn't execcuted, says wins are equal.
+
+  		if (this.losses < team2.losses) {
+  			return 1;
+  		}
+  		if (this.losses > team2.losses) {
+  			return -1;
+  		}
+  				// wins and looses are equls if code above doesn't satisfied.
+  		if (this.draws > team2.draws) {
+  			return 1; // team with more draws is good.
+  		}
+  		if (this.draws < team2.draws) {
+  			return -1;
+  		}
  		return 0;
   	}
 
