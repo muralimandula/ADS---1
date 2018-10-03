@@ -66,7 +66,7 @@ class Team implements Comparable<Team> {
     }
     if (this.draws < other.draws) {
         return -1;
-    }else {
+    } else {
         return 0;
      }
     }
@@ -85,7 +85,7 @@ class Team implements Comparable<Team> {
 /**
  * Class for insertion sort of teams.
  */
-class InsertionSortTeam {
+final class InsertionSortTeam {
 
     /**
      * Constructs the object.
