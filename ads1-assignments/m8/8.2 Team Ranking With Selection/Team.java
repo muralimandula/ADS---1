@@ -58,7 +58,7 @@ class SelectionSortTeam {
 			int minimumPosition = i;
 			for(int j = i + 1; j < size; j++) {
 
-				if(teams[minimumPosition].compareTo(teams[j]) > 0) {
+				if(teams[j].compareTo(teams[minimumPosition]) > 0) {
 
 
 					minimumPosition = j;
@@ -70,13 +70,8 @@ class SelectionSortTeam {
 		}
 	}
 
-	// static boolean sort(Comparable team1, Comparable team2) {
 
-	// 	return team1.compareTo(team2) > 0;
-	// }
-	//
-
-	static void swap (Comparable[] teams, int i, int minimumPosition) {
+	static void swap(Comparable[] teams, int i, int minimumPosition) {
 
 		Comparable temp = teams[i];
 		teams[i] = teams[minimumPosition];
