@@ -117,7 +117,7 @@ class Solution {
 				}
 				System.out.println(string.substring(0, string.length() - 2));
 				} catch(Exception e) {
-					System.out.println("Can't insert at this position.");
+					System.out.println("No elements to reverse.");
 				}
 				break;
 			}

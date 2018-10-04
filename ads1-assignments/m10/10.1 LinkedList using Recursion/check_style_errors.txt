@@ -22,7 +22,7 @@ Starting audit...
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:26:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:26:45: 'head' hides a field. [HiddenField]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:27: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:29:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:29:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:34: Line is longer than 80 characters (found 84). [LineLength]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:39:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:43:9: Missing a Javadoc comment. [JavadocMethod]
@@ -50,6 +50,6 @@ Starting audit...
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:107: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:118: Line is longer than 80 characters (found 93). [LineLength]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:119:40: 'catch' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:120: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:120: Line is longer than 80 characters (found 86). [LineLength]
 Audit done.
 Checkstyle ends with 52 errors.
