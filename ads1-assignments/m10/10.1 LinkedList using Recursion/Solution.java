@@ -1,5 +1,5 @@
-import java.util.*;
-
+import java.util.Scanner;
+import java.util.Iterator;
 /**
  * LinkedList implementing Iterator.
  *
@@ -10,7 +10,7 @@ class LinkedList<Generic> implements Iterable<Generic> {
   /**
    * Node head, initialised.
    */
-  Node head; //creating first/ead element.
+  private Node head; //creating first/ead element.
 
               /**
                * Class for node.
@@ -27,7 +27,13 @@ class LinkedList<Generic> implements Iterable<Generic> {
                  */
                 private Node next;
 
-                Node (Generic dataCreate, Node nextCreate) {
+                /**
+                 * Constructs the object.
+                 *
+                 * @param      dataCreate  The data created
+                 * @param      nextCreate  The next created
+                 */
+                Node(final Generic dataCreate, final Node nextCreate) {
                   this.data = dataCreate;
                   this.next = nextCreate;
                 }
@@ -40,7 +46,7 @@ class LinkedList<Generic> implements Iterable<Generic> {
    * @param      index    The index
    * @param      element  The element
    */
-  public void insertAt(int index, Generic element) {
+  public void insertAt(final int index, final Generic element) {
     // inserting at a position/index
     head = insertHelper(head, index, element);
     }
@@ -51,23 +57,23 @@ class LinkedList<Generic> implements Iterable<Generic> {
    *
    * Time COmplexity : O(N).
    *
-   * @param      head      The head
+   * @param      insertHead      The insertHead
    * @param      position  The position
    * @param      element   The element
    *
    * @return     { description_of_the_return_value }
    */
-  public Node insertHelper(final Node head, final int position,
+  public Node insertHelper(final Node insertHead, final int position,
                  final Generic element) {
 
-    if(position == 0) {
-      return new Node(element, head);
-        // for the first time, head is null.
-        // Thereafter, head is previous head.data.
+    if (position == 0) {
+      return new Node(element, insertHead);
+        // for the first time, insertHead is null.
+        // Thereafter, insertHead is previous insertHead.data.
       }
-      head.next = insertHelper(head.next,  position - 1, element);
-      // System.out.println(head.data);
-      return head;
+      insertHead.next = insertHelper(insertHead.next,  position - 1, element);
+      // System.out.println(insertHead.data);
+      return insertHead;
     }
 
   /**
@@ -86,11 +92,13 @@ class LinkedList<Generic> implements Iterable<Generic> {
    *
    * @return     Node/element.
    */
-  public Node reverseHelper(Node head) {
-      if (head == null || head.next == null) return head;
-      Node nhead = reverseHelper(head.next);
-      head.next.next = head;
-      head.next = null;
+  public Node reverseHelper(final Node rhead) {
+      if (rhead == null || rhead.next == null) {
+        return rhead;
+      }
+      Node nhead = reverseHelper(rhead.next);
+      rhead.next.next = rhead;
+      rhead.next = null;
       return nhead;
     }
 
@@ -109,9 +117,9 @@ class LinkedList<Generic> implements Iterable<Generic> {
    */
   private class MyIterator implements Iterator {
       /**
-       * Current initialised.
+       * Current node initialised.
        */
-      Node current;
+      private Node current;
 
       /**
        * Constructs the object.
@@ -119,7 +127,7 @@ class LinkedList<Generic> implements Iterable<Generic> {
        *
        * @param      first  The first
        */
-      public MyIterator(Node first) {
+      MyIterator(final Node first) {
         current = first;
       }
 
@@ -157,7 +165,7 @@ class LinkedList<Generic> implements Iterable<Generic> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
 
   /**
    * Constructs the object.

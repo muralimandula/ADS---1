@@ -1,20 +1,5 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:13:8: Variable 'head' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:30:17: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:30:22: '(' is preceded with whitespace. [MethodParamPad]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:30:23: Parameter dataCreate should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:30:43: Parameter nextCreate should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:43:24: Parameter index should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:43:35: Parameter element should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:60:39: 'head' hides a field. [HiddenField]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:63:7: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:89:29: Parameter head should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:89:34: 'head' hides a field. [HiddenField]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:90: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:114:12: Variable 'current' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:122:7: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:122:25: Parameter first should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:160: Class Solution should be declared as final. [FinalClass]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:91:6: Unused @param tag for 'head'. [JavadocMethod]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:95:40: Expected @param tag for 'rhead'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 2 errors.
