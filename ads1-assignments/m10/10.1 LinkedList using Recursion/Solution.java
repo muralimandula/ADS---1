@@ -88,7 +88,7 @@ class LinkedList<Generic> implements Iterable<Generic> {
    *
    * Time COmplexity : O(N).
    *
-   * @param      head  The head
+   * @param      rhead  The head in reversing.
    *
    * @return     Node/element.
    */
