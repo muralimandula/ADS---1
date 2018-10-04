@@ -43,8 +43,13 @@ Starting audit...
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:82:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:84:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:95: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:99: Line is longer than 80 characters (found 117). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:104: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:113: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:100: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:101: Line is longer than 80 characters (found 117). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:105: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:106:40: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:107: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:118: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:119:40: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:120: Line is longer than 80 characters (found 93). [LineLength]
 Audit done.
-Checkstyle ends with 47 errors.
+Checkstyle ends with 52 errors.

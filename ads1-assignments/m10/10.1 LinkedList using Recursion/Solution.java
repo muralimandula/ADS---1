@@ -95,22 +95,30 @@ class Solution {
 			switch (input[0]) {
 
 			case "insertAt" :
-				lList.insertAt(Integer.parseInt(input[1]),
-											 Integer.parseInt(input[2]));
 
-				for (Integer element : lList) {
-					string += element + ", ";
+				try {
+					lList.insertAt(Integer.parseInt(input[1]),
+											 Integer.parseInt(input[2]));
+					for (Integer element : lList) {
+						string += element + ", ";
+					}
+					System.out.println(string.substring(0, string.length() - 2));
+				} catch(Exception e) {
+					System.out.println("Can't insert at this position.");
 				}
-				System.out.println(string.substring(0, string.length() - 2));
 				break;
 
 
 			case "reverse" :
+				try {
 				lList.reverseOf();
 				for (Integer element : lList) {
 					string += element + ", ";
 				}
 				System.out.println(string.substring(0, string.length() - 2));
+				} catch(Exception e) {
+					System.out.println("Can't insert at this position.");
+				}
 				break;
 			}
 		}
