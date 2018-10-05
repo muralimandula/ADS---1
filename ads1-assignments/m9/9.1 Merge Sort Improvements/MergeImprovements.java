@@ -24,12 +24,12 @@ class MergeImprovements {
      * @param      lo     The lower value
      * @param      hi     The higher value
      */
-    public void sort(final Comparable[] aux, final Comparable[] array,
+    public void sort(final Comparable[] array, final Comparable[] aux,
                      final int lo, final int hi) {
 
         if (hi <= lo + pointSeven) {
 
-            insertionSort(array, lo, hi);
+            insertionSort(aux, lo, hi);
             System.out.println("Insertion sort method invoked...");
             return;
         }
