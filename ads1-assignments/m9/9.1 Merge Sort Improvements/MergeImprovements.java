@@ -24,12 +24,12 @@ class MergeImprovements {
      * @param      lo     The lower value
      * @param      hi     The higher value
      */
-    public void sort(final Comparable[] array, final Comparable[] aux,
+    public void sort(final Comparable[] aux, final Comparable[] array,
                      final int lo, final int hi) {
 
         if (hi <= lo + pointSeven) {
 
-            insertionSort(aux, lo, hi);
+            insertionSort(array, lo, hi);
             System.out.println("Insertion sort method invoked...");
             return;
         }
@@ -38,12 +38,12 @@ class MergeImprovements {
         sort(aux, array, lo, mid); //recursion
         sort(aux, array, mid + 1, hi);
 
-        if (!(array[mid + 1].compareTo(array[mid]) < 0)) {
-            for (int i = lo; i <= hi; i++) {
+        if (array[mid + 1].compareTo(array[mid]) > 0) {
+
+           for (int i = lo; i <= hi; i++) {
                 aux[i] = array[i];
             }
-
-        System.out.println(
+            System.out.println(
                 "Array is already sorted. So, skipped the call to merge...");
             return;
         }
@@ -69,11 +69,8 @@ class MergeImprovements {
         int i = lo;
         int j = mid + 1;
         for (int k = lo; k <= hi; k++) {
-            if (i > mid) {
-                aux[k] = array[j++];
-            } else if (j > hi) {
-                aux[k] = array[i++];
-            } else if (array[j].compareTo(array[i]) < 0) {
+
+			if (array[j].compareTo(array[i]) < 0) {
                 aux[k] = array[j++];
             } else {
                 aux[k] = array[i++];
