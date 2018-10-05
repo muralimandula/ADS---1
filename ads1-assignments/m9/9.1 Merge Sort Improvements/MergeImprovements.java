@@ -69,7 +69,11 @@ class MergeImprovements {
         int i = lo;
         int j = mid + 1;
         for (int k = lo; k <= hi; k++) {
-			if (array[j].compareTo(array[i]) < 0) {
+            if (i > mid) {
+                aux[k] = array[j++];
+            } else if (j > hi) {
+                aux[k] = array[i++];
+            } else if (array[j].compareTo(array[i]) < 0) {
                 aux[k] = array[j++];
             } else {
                 aux[k] = array[i++];
