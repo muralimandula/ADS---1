@@ -1,0 +1,55 @@
+Suppose that the sequence P R I O * R * * I * T * Y * * * Q U E * * * U * E (where a letter means insert and an asterisk means remove the maximum) is applied to an initially empty priority queue. Give the sequence of values returned by remove the maximum operations.
+
+P R I O * R * * I * T * Y * * * Q U E * * * U * E
+
+[]
+
+P --> [P]
+
+R --> [R P] 	---> R > P, swaps eachother positions.
+
+I --> [R P I]	---> I < P, remains unchanged.
+
+O --> [R P I O] ---> O < P, remains unchanged.
+
+* --> [P I O]   ---> * RETURNS R, that is at root position(Maximum).
+
+R --> [R P I O]
+
+* --> [P I O]   ---> * RETURNS R
+
+* --> [O I] 	---> * RETURNS P
+
+I --> [O I I]
+
+* --> [I I] 	---> * RETURNS O
+
+T--> [T I I]
+
+* --> [I I]	    ---> * RETURNS T
+
+Y --> [Y I I]
+
+* --> [I I] 	---> * RETURNS Y
+
+* --> [I] 		---> * RETURNS I
+
+* --> [] 		---> * RETURNS I
+
+Q --> [Q]
+
+U --> [U Q]
+
+E --> [U Q E]
+
+* --> [Q E] 	---> * RETURNS U
+
+* --> [E] 		---> * RETURNS Q
+
+* --> [] 		---> * RETURNS E
+
+U --> [U]
+
+* --> [] 		---> * RETURNS U
+
+E --> [E]
