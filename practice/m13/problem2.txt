@@ -1,0 +1,8 @@
+Is an array that is sorted in Ascending order a min-oriented heap? Why?
+
+
+For an example, let us consider a sorted Array, a = [1,2,3,4,5,6,7,8,9]
+
+Since the array is in ascending order, all the succeeding elements(assume to child) are greater than or equal to their previous elements(could be parent).
+
+Hence, a sorted array in ascnding order can be a min-oriented heap.
