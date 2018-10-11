@@ -23,7 +23,7 @@ class DynamicMedian {
     }
 
     /**
-     *inserting into minHeap
+     *inserting into minHeap.
      *
      * @param      item  The item
      */
@@ -50,7 +50,7 @@ class DynamicMedian {
     }
 
     /**
-     *getter for maxHeap
+     *getter for maxHeap.
      *
      * @return     The maximum.
      */

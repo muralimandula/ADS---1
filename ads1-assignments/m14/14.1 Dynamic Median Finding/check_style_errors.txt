@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:25: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m14\14.1 Dynamic Median Finding\Solution.java:52: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 3 errors.

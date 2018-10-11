@@ -15,7 +15,7 @@ public class MaxPQ<Key> {
     /**
      * Initializes an empty priority queue with the given initial capacity.
      *
-     * @param  initCapacity the initial capacity of this priority queue
+     * @param  initCapacity the initial capacity of this priority queue.
      */
     public MaxPQ(final int initCapacity) {
         pq = (Key[]) new Object[initCapacity + 1];
@@ -41,7 +41,7 @@ public class MaxPQ<Key> {
     /**
      * Returns number of keys on this queue.
      *
-     * @return the number of keys
+     * @return the number of keys.
      */
     public int size() {
         return n;
