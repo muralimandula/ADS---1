@@ -1,70 +1,151 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Collections;
-
 /**
- * Class for solution.
+ *Class for dynamic median.
  */
-public final class Solution {
+class DynamicMedian {
 
     /**
-     * Constructs the object.
+     *object for MinPQ class of type Double.
      */
-    private Solution() {
-        //unused.
+    private MinPQ<Double> min;
+
+    /**
+     *object for MaxPQ class of type Double.
+     */
+    private MaxPQ<Double> max;
+
+    /**
+     *COnstrucotr.
+     */
+    DynamicMedian() {
+        min = new MinPQ<Double>();
+        max = new MaxPQ<Double>();
     }
 
-        /**
-         * Median calculation.
-         *
-         * @param      intArray  The int array
-         */
-        static void median(final ArrayList<Integer> intArray) {
+    /**
+     *inserting into minHeap
+     *
+     * @param      item  The item
+     */
+    public void insertAtMin(final double item) {
+        min.insert(item);
+    }
 
-            // System.out.println(intArray);
+    /**
+     *inserting into maxHeap.
+     *
+     * @param      item  The item
+     */
+    public void insertAtMax(final double item) {
+        max.insert(item);
+    }
 
-            Collections.sort(intArray);
-            // System.out.println(intArray);
+    /**
+     *getter for minHeap.
+     *
+     * @return     The minimum.
+     */
+    public double getMin() {
+        return min.min();
+    }
 
-            int arraySize = intArray.size();
-            double median;
-            if (arraySize % 2 != 0) {
+    /**
+     *getter for maxHeap
+     *
+     * @return     The maximum.
+     */
+    public double getMax() {
+        return max.max();
+    }
 
-                // System.out.println(intArray.get(arraySize / 2));
-                median = intArray.get(arraySize / 2);
-                System.out.println(median);
+    /**
+     *deleting max from maxHeap.
+     *
+     * @return     The max.
+     */
+    public double delMax() {
+        return max.delMax();
+    }
+
+    /**
+     *deleting minimum.
+     *
+     * @return     The minimum.
+     */
+    public double delMin() {
+        return min.delMin();
+    }
+
+    /**
+     *getter for minimum size.
+     *
+     * @return     The minimum size.
+     */
+    public int getMinSize() {
+        return min.size();
+    }
+    /**
+     * Gets the maximum size of maxheap.
+     *
+     * @return     The maximum size.
+     */
+    public int getMaxSize() {
+        return max.size();
+    }
+}
+/**
+ *this class is for main method.
+ */
+final class Solution {
+    /**
+     *an empty constructor.
+     */
+    private Solution() {
+    }
+    /**
+     *the main method is to.
+     *take the input from user.
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        DynamicMedian medianObj = new DynamicMedian();
+        long inputs = scan.nextLong();
+        double element = scan.nextDouble();
+        medianObj.insertAtMin(element);
+        double median = element;
+        System.out.println(median);
+        for (long i = 1; i < inputs; i++) {
+            double input = scan.nextDouble();
+            if (input > median) {
+                medianObj.insertAtMin(input);
+            } else if (input < median) {
+                medianObj.insertAtMax(input);
             } else {
-
-
-                // System.out.println((intArray.get(arraySize / 2
-                // ) + " "  + intArray.get((arraySize / 2) - 1)));
-
-                median = ((double) intArray.get(arraySize / 2)
-                 + intArray.get((arraySize / 2) - 1)) / 2;
-
-
-
+                medianObj.insertAtMin(input);
+            }
+            if (medianObj.getMinSize() - medianObj.getMaxSize() > 1) {
+                medianObj.insertAtMax(medianObj.delMin());
+            }
+            if (medianObj.getMaxSize() - medianObj.getMinSize()  > 1) {
+                medianObj.insertAtMin(medianObj.delMax());
+            }
+            if (Math.abs(
+                        medianObj.getMinSize() - medianObj.getMaxSize()) == 1) {
+                if (medianObj.getMinSize() > medianObj.getMaxSize()) {
+                    median = medianObj.getMin();
+                    System.out.println(median);
+                } else {
+                    median = medianObj.getMax();
+                    System.out.println(median);
+                }
+            }
+            if (medianObj.getMinSize()  == medianObj.getMaxSize()) {
+                double min = medianObj.getMin();
+                double max = medianObj.getMax();
+                median = (min + max) / 2.0;
                 System.out.println(median);
-
             }
-
         }
-
-        /**
-         * Main Method.
-         *
-         * @param      args  The arguments
-         */
-        public static void main(final String[] args) {
-
-            Scanner scan = new Scanner(System.in);
-
-            int nOfIntegers = Integer.parseInt(scan.nextLine());
-            ArrayList<Integer> array = new ArrayList<>();
-            for (int i = 0; i < nOfIntegers; i++) {
-                array.add(Integer.parseInt(scan.nextLine()));
-                median(array);
-            }
-
-        }
+    }
 }
