@@ -1,19 +1,11 @@
 Starting audit...
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:11:13: Variable 'sum' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:16:13: Variable 'i' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:21:13: Variable 'j' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:29:17: Parameter ith should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:29:26: Parameter jth should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:42:30: Parameter that should be final. [FinalParameters]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:43: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:44: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:71:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:83:38: '1000' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:97: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:103: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:103:35: '1500' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:8:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:10:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:20:38: '1000' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:34: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:40: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:40:35: '1500' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 8 errors.
