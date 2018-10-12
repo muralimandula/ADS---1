@@ -67,9 +67,9 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
      */
     private void resize(final int newSize) {
         keys = Arrays.copyOf(keys, newSize);
-                    //newSized array with all previous keys.
+        //newSized array with all previous keys.
         values = Arrays.copyOf(values, newSize);
-                //newSized array with all previous values.
+        //newSized array with all previous values.
     }
 
     /**
@@ -155,8 +155,8 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     /**
-     * Deletes a given key.
-     * Complexity N
+     * Deletes key.
+     * Time Complexity : N
      * @param      keyToDelete  The keyToDelete
      */
     public void delete(final Key keyToDelete) {
@@ -180,6 +180,7 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
             resize(keys.length / 2);
         }
     }
+
     /**
      * deletes the minimum value.
      */
@@ -192,7 +193,7 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns a string representation of the object.
-     * Complexity N.
+     * TIme Complexity : N.
      * @return     String representation of the object.
      */
     public String toString() {
@@ -205,6 +206,7 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
         }
         return s;
     }
+
     /**
      * Gets the maximum.
      *
