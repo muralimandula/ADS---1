@@ -10,17 +10,17 @@ public class Solution {
     /**
      * Magic number.
      */
-    private static final int a = 1000;
+    private static final int aA = 1000;
 
     /**
      * Magic Number.
      */
-    private static final int b = 1500;
+    private static final int bB = 1500;
 
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         //unused.
     }
 
@@ -34,7 +34,7 @@ public class Solution {
         int n = sc.nextInt();
         int m = sc.nextInt();
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 1; i <= a; i++) {
+        for (int i = 1; i <= aA; i++) {
             pq.insert(new CubeSum(i, i));
         }
         CubeSum prev = new CubeSum(0, 0);
@@ -56,7 +56,7 @@ public class Solution {
                 p = 1;
             }
             prev = c;
-            if (c.j < b) {
+            if (c.j < bB) {
                 pq.insert(new CubeSum(c.i, c.j + 1));
             }
 

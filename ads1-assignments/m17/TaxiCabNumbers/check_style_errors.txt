@@ -1,6 +1,6 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:8:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:13:30: Name 'a' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:18:30: Name 'b' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:8: Class Solution should be declared as final. [FinalClass]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:13:30: Name 'aA' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:18:30: Name 'bB' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
 Audit done.
 Checkstyle ends with 3 errors.
