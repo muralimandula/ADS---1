@@ -1,13 +1,28 @@
 import java.util.Comparator;
+
 /**
  * Class for minimum pq.
  *
  * @param      <Key>  The key
  */
 public class MinPQ<Key> {
+
+    /**
+     * pq array.
+     */
     private Key[] pq;
+
+    /**
+     * int n.
+     */
     private int n;
+
+    /**
+     * key Comparator.
+     */
     private Comparator<Key> comparator;
+
+
     /**
      * Initializes an empty priority queue with the given initial capacity.
      *
@@ -24,6 +39,8 @@ public class MinPQ<Key> {
     public MinPQ() {
         this(1);
     }
+
+
     /**
      * Determines if empty.
      *
