@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m14\14.2 student reservation system\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
