@@ -1,11 +1,6 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:8:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:10:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:20:38: '1000' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:34: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:40: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:40:35: '1500' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:13:30: Name 'a' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:18:30: Name 'b' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 3 errors.
