@@ -31,10 +31,10 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
 
     /**
-     * Adds the key, value pair.
-     * Time Complexity : N
-     * @param      k
-     * @param      v
+     * adding key,value pair.
+     *
+     * @param      k     { parameter_description }
+     * @param      v     { parameter_description }
      */
     public void put(final Key k, final Value v) {
         if (v == null) {
@@ -134,11 +134,11 @@ public final class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
 
     /**
-     * Finds the floor of the entered key.
+     * Gets the floor.
      *
-     * @param      key
+     * @param      key   The key
      *
-     * @return     floor of key.
+     * @return     The floor.
      */
     public Key getFloor(final Key key) {
         if (isEmpty()) {
