@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:13:30: Name 'thousand' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m17\TaxiCabNumbers\Solution.java:18:30: Name 'fifteenH' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
 Audit done.
-Checkstyle ends with 2 errors.

@@ -10,12 +10,12 @@ public final class Solution {
     /**
      * Magic number.
      */
-    private static final int thousand = 1000;
+    private static final int THOUSAND = 1000;
 
     /**
      * Magic Number.
      */
-    private static final int fifteenH = 1500;
+    private static final int FIFTEENH = 1500;
 
     /**
      * Constructs the object.
@@ -34,7 +34,7 @@ public final class Solution {
         int n = sc.nextInt();
         int m = sc.nextInt();
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 1; i <= thousand; i++) {
+        for (int i = 1; i <= THOUSAND; i++) {
             pq.insert(new CubeSum(i, i));
         }
         CubeSum prev = new CubeSum(0, 0);
@@ -56,7 +56,7 @@ public final class Solution {
                 p = 1;
             }
             prev = c;
-            if (c.j < fifteenH) {
+            if (c.j < FIFTEENH) {
                 pq.insert(new CubeSum(c.i, c.j + 1));
             }
 
