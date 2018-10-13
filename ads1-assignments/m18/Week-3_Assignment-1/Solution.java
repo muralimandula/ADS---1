@@ -127,9 +127,17 @@ final class SortingStock {
  */
 public final class Solution {
 
-    static int FIVE = 5;
+    /**
+     * Magic numebr.
+     */
+    private static int FIVE = 5;
 
-    static int SIX = 6;
+
+    /**
+     * Magic number.
+     */
+    private static int SIX = 6;
+
     /**
      * Constructs the object.
      */
