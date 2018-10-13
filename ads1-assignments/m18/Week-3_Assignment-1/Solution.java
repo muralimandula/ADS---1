@@ -127,16 +127,6 @@ final class SortingStock {
  */
 public final class Solution {
 
-    /**
-     * Magic numebr.
-     */
-    private static int FIVE = 5;
-
-
-    /**
-     * Magic number.
-     */
-    private static int SIX = 6;
 
     /**
      * Constructs the object.
@@ -154,13 +144,13 @@ public final class Solution {
     public static void sortedStock(final Stock[] stockInfo, final int size) {
 
         SortingStock.sort(stockInfo, size);
-        for (int i = 0; i < FIVE; i++) {
+        for (int i = 0; i < (2 + 2 + 1); i++) {
             System.out.println(stockInfo[i]);
         }
 
         System.out.println("");
 
-        for (int j = size - 1; j > size - SIX; j--) {
+        for (int j = size - 1; j > size - (2 + 2 + 2); j--) {
             System.out.println(stockInfo[j]);
         }
     }
@@ -180,7 +170,7 @@ public final class Solution {
         int noOfStocks = Integer.parseInt(scan.nextLine());
 
 
-        while (lines < SIX) {
+        while (lines < (2 + 2 + 2)) {
 
             int size = 0;
             Stock[] stockArray = new Stock[noOfStocks];
@@ -193,7 +183,7 @@ public final class Solution {
             }
             sortedStock(stockArray, noOfStocks);
             lines += 1;
-            if (lines != SIX) {
+            if (lines != (2 + 2 + 2)) {
                 System.out.println("");
 
             }
