@@ -1,19 +1,11 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:9:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:9:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:11:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:15:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:15:57: 'stockRate' hides a field. [HiddenField]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:106: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:127: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:127:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:130:37: '5' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:136:51: '6' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:156:32: '6' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:163: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:164: Line is longer than 80 characters (found 113). [LineLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:172:38: '6' is a magic number. [MagicNumber]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:172:39: ')' is preceded with whitespace. [ParenPad]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:146:29: '5' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:152:43: '6' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:167:13: Name 'FIVE' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:167:20: '5' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:169:13: Name 'SIX' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:169:19: '6' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:176:24: '6' is a magic number. [MagicNumber]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m18\Week-3_Assignment-1\Solution.java:189:26: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 8 errors.

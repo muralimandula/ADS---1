@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Class for team object.
@@ -6,46 +6,57 @@ import java.util.*;
  */
 class Stock implements Comparable<Stock> {
 
-	private String stockName;
+    /**
+     * Stock name.
+     */
+    private String stockName;
 
-	private double stockRate;
+    /**
+     * Stock rate.
+     */
+    private double stockRate;
 
 
+    /**
+     * Constructs the object.
+     *
+     * @param      nameOftheStock    The name ofthe stock
+     * @param      currentstockRate  The currentstock rate
+     */
+    Stock(final String nameOftheStock, final double currentstockRate) {
+        this.stockName = nameOftheStock;
+        this.stockRate = currentstockRate;
+    }
 
-	Stock(final String nameOftheStock, final double stockRate) {
-		this.stockName = nameOftheStock;
-		this.stockRate = stockRate;
-	}
+    /**
+     * Compares two objects of this class.
+     * Complexity Analysis: O(1).
+     *
+     * @param      other  The other
+     *
+     * @return     1 if greater
+     *             0 if equal.
+     *             -1 if lesser.
+     */
+    public int compareTo(final Stock other) {
+        if (this.stockRate > other.stockRate) {
+            return 1;
+        }
+        if (this.stockRate < other.stockRate) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 
-	/**
-	 * Compares two objects of this class.
-	 * Complexity Analysis: O(1).
-	 *
-	 * @param      other  The other
-	 *
-	 * @return     1 if greater
-	 *             0 if equal.
-	 *             -1 if lesser.
-	 */
-	public int compareTo(final Stock other) {
-		if (this.stockRate > other.stockRate) {
-			return 1;
-		}
-		if (this.stockRate < other.stockRate) {
-			return -1;
-		} else {
-			return 0;
-		}
-	}
-
-	/**
-	 * Returns a string representation of the object.
-	 *
-	 * @return     String representation of the object.
-	 */
-	public String toString() {
-		return stockName +  " " + stockRate;
-	}
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return stockName +  " " + stockRate;
+    }
 }
 
 
@@ -55,59 +66,59 @@ class Stock implements Comparable<Stock> {
  */
 final class SortingStock {
 
-	/**
-	 * Constructs the object.
-	 */
-	private SortingStock() {
-		//dummy constructor.
-	}
-	/**
-	 * To check if the object is greater.
-	 *
-	 * @param      a     team 1
-	 * @param      b     team 2
-	 *
-	 * @return     returns true if team 1 is greater than
-	 * team 2 on the leader board.
-	 */
-	static boolean more(final Comparable a, final Comparable b) {
-		return a.compareTo(b) > 0;
-	}
+    /**
+     * Constructs the object.
+     */
+    private SortingStock() {
+        //dummy constructor.
+    }
+    /**
+     * To check if the object is greater.
+     *
+     * @param      a     team 1
+     * @param      b     team 2
+     *
+     * @return     returns true if team 1 is greater than
+     * team 2 on the leader board.
+     */
+    static boolean more(final Comparable a, final Comparable b) {
+        return a.compareTo(b) > 0;
+    }
 
-	/**
-	 * Swaps 2 objects in the array of objects.
-	 *
-	 * @param      a     Array of objects.
-	 * @param      i     Object 1.
-	 * @param      j     Object 2.
-	 */
-	static void swap(final Comparable[] a, final int i, final int j) {
-		Comparable temp = a[i];
-		a[i] = a[j];
-		a[j] = temp;
-	}
+    /**
+     * Swaps 2 objects in the array of objects.
+     *
+     * @param      a     Array of objects.
+     * @param      i     Object 1.
+     * @param      j     Object 2.
+     */
+    static void swap(final Comparable[] a, final int i, final int j) {
+        Comparable temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
 
-	/**
-	 * Sorts the array of objects using Insertion Sort.
-	 *
-	 * Best Case: N-1 compares and 0 exchanges.
-	 * Average Case: (N^2)/4 compares and (N^2)/4 exchanges.
-	 * Worst Case: (N^2)/2 compares and (N^2)/2 exchanges.
-	 *
-	 * @param      stock   The array of apllications.
-	 * @param      size  The number of objects in the array.
-	 */
-	static void sort(final Comparable[] stock, final int size) {
+    /**
+     * Sorts the array of objects using Insertion Sort.
+     *
+     * Best Case: N-1 compares and 0 exchanges.
+     * Average Case: (N^2)/4 compares and (N^2)/4 exchanges.
+     * Worst Case: (N^2)/2 compares and (N^2)/2 exchanges.
+     *
+     * @param      stock   The array of apllications.
+     * @param      size  The number of objects in the array.
+     */
+    static void sort(final Comparable[] stock, final int size) {
 
-		for (int i = 0; i < size; i++) {
-			for (int j = i; j > 0; j--) {
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j > 0; j--) {
 
-				if (more(stock[j], stock[j - 1])) {
-					swap(stock, j, j - 1);   // Swapping team positions.
-				}
-			}
-		}
-	}
+                if (more(stock[j], stock[j - 1])) {
+                    swap(stock, j, j - 1);   // Swapping team positions.
+                }
+            }
+        }
+    }
 }
 
 
@@ -116,65 +127,71 @@ final class SortingStock {
  */
 public final class Solution {
 
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		// unused constructor
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        // unused constructor
+    }
+
+    /**
+     * sorting stock.
+     *
+     * @param      stockInfo  The stock information
+     * @param      size       The size
+     */
+    public static void sortedStock(final Stock[] stockInfo, final int size) {
+
+        SortingStock.sort(stockInfo, size);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(stockInfo[i]);
+        }
+
+        System.out.println("");
+
+        for (int j = size - 1; j > size - 6; j--) {
+            System.out.println(stockInfo[j]);
+        }
+    }
+
+    /**
+     * Main method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
 
 
-	public static void sortedStock(final Stock[] stockInfo, final int size) {
+        int lines = 0;
 
-		SortingStock.sort(stockInfo, size);
-		for (int i = 0; i < 5; i++) {
-			System.out.println(stockInfo[i]);
-		}
+        int FIVE = 5;
 
-		System.out.println("");
+        int SIX = 6;
 
-		for (int j = size - 1; j > size - 6; j--) {
-			System.out.println(stockInfo[j]);
-		}
-	}
+        Scanner scan = new Scanner(System.in);
 
-	/**
-	 * Main method.
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(final String[] args) {
+        int noOfStocks = Integer.parseInt(scan.nextLine());
 
 
-		int lines = 0;
+        while (lines < 6) {
 
-		Scanner scan = new Scanner(System.in);
+            int size = 0;
+            Stock[] stockArray = new Stock[noOfStocks];
+            for (int i = 0; i < noOfStocks; i++) {
+                String[] stockDetails = scan.nextLine().split(",");
+                Stock stockObj = new Stock(stockDetails[0],
+                             Double.parseDouble(stockDetails[1]));
+                stockArray[size] = stockObj;
+                size += 1;
+            }
+            sortedStock(stockArray, noOfStocks);
+            lines += 1;
+            if (lines != 6) {
+                System.out.println("");
 
-		int noOfStocks = Integer.parseInt(scan.nextLine());
-
-
-		while (lines < 6) {
-
-			int size = 0;
-			Stock[] stockArray = new Stock[noOfStocks];
-
-			for (int i = 0; i < noOfStocks; i++) {
-
-				String[] stockDetails = scan.nextLine().split(",");
-				Stock stockObj = new Stock(stockDetails[0], Double.parseDouble(stockDetails[1]));
-				stockArray[size] = stockObj;
-				size += 1;
-			}
-
-			sortedStock(stockArray, noOfStocks);
-
-			lines += 1;
-			if (lines != 6 ) {
-				System.out.println("");
-
-			}
+            }
 
 
-		}
-	}
+        }
+    }
 }
