@@ -170,13 +170,10 @@ public final class Solution {
 
         sortedStock(stockArray, noOfStocks);
 
+        System.out.println("");
 
         lines +=1;
 
-        if(lines != 6) {
-        System.out.println("");
-
-        }
 
 
     	}
