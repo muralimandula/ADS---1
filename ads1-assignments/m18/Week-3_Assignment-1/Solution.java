@@ -155,9 +155,8 @@ public final class Solution {
 
 
         while(lines < 6) {
+
     	int size = 0;
-
-
         Stock[] stockArray = new Stock[noOfStocks];
 
         for(int i = 0; i < noOfStocks; i++) {
@@ -169,7 +168,6 @@ public final class Solution {
 	    	}
 
         sortedStock(stockArray, noOfStocks);
-
 
         lines +=1;
         if (lines !=6 ) {
