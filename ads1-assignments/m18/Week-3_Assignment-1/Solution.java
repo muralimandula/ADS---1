@@ -45,7 +45,7 @@ class Stock implements Comparable<Stock> {
      * @return     String representation of the object.
      */
     public String toString() {
-        return stockName +  "," + stockRate;
+        return stockName +  " " + stockRate;
     }
 }
 
