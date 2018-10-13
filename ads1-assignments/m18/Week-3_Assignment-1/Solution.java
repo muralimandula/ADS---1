@@ -127,6 +127,9 @@ final class SortingStock {
  */
 public final class Solution {
 
+    static int FIVE = 5;
+
+    static int SIX = 6;
     /**
      * Constructs the object.
      */
@@ -143,13 +146,13 @@ public final class Solution {
     public static void sortedStock(final Stock[] stockInfo, final int size) {
 
         SortingStock.sort(stockInfo, size);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < FIVE; i++) {
             System.out.println(stockInfo[i]);
         }
 
         System.out.println("");
 
-        for (int j = size - 1; j > size - 6; j--) {
+        for (int j = size - 1; j > size - SIX; j--) {
             System.out.println(stockInfo[j]);
         }
     }
@@ -164,16 +167,12 @@ public final class Solution {
 
         int lines = 0;
 
-        int FIVE = 5;
-
-        int SIX = 6;
-
         Scanner scan = new Scanner(System.in);
 
         int noOfStocks = Integer.parseInt(scan.nextLine());
 
 
-        while (lines < 6) {
+        while (lines < SIX) {
 
             int size = 0;
             Stock[] stockArray = new Stock[noOfStocks];
@@ -186,7 +185,7 @@ public final class Solution {
             }
             sortedStock(stockArray, noOfStocks);
             lines += 1;
-            if (lines != 6) {
+            if (lines != SIX) {
                 System.out.println("");
 
             }
