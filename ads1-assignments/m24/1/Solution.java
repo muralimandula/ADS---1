@@ -102,10 +102,13 @@ public static void main(final String[] args) {
     int size = 0;
 
 
+    /**
+     * Inserting student details.
+     * Time Complexity : N (N is no.of applicants)
+     */
     for (int i = 0; i < noOfStudents; i++) {
 
         String[] studentData = scan.nextLine().split(",");
-
 
         Student studentInfo = new Student(Integer.parseInt(studentData[0]),
              studentData[1], Double.parseDouble(studentData[2]));
@@ -117,7 +120,10 @@ public static void main(final String[] args) {
 
     int noOfQueires = Integer.parseInt(scan.nextLine());
 
-
+    /**
+     * Retrieving student details.
+     * Time Complexity : N (N is no.of Queries)
+     */
     for (int j = 0; j < noOfQueires; j++) {
 
         int flag = 0;
@@ -128,6 +134,13 @@ public static void main(final String[] args) {
 
             case "1":
 
+
+                /**
+                 * To find name of Students with rollNum.
+                 * Unordered Selection
+                 * TIme Complexity - Worse case = N (Checking all)
+                 * TIme Complexity - Best case = 1 (May encounter at first)
+                 */
                 for (int k = 0; k < size; k++) {
 
 
@@ -149,6 +162,13 @@ public static void main(final String[] args) {
             break;
 
             case "2":
+
+                /**
+                 * To find TotalMarks of Students with rollNum.
+                 * Unordered Selection
+                 * TIme Complexity - Worse case = N (Checking all)
+                 * TIme Complexity - Best case = 1 (May encounter at first)
+                 */
 
                 for (int k = 0; k < size; k++) {
 
