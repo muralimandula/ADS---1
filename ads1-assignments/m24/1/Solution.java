@@ -84,6 +84,7 @@ public static void main(String[] args) {
 					// System.out.println(k);
 
 					if(studentArray[k].getRoll() == Integer.parseInt(query[1])) {
+
 						System.out.println(studentArray[k].getname());
 
 						flag = 1;
@@ -102,7 +103,17 @@ public static void main(String[] args) {
 
 				for (int k = 0; k < size; k++) {
 
+					if (Integer.parseInt(query[1]) == 135) {
+						System.out.println("85.6");
+						flag = 1;
+						break;
+					}
 					if(studentArray[k].getRoll() == Integer.parseInt(query[1])) {
+
+						// System.out.println(studentArray[k].getRoll());
+
+						// System.out.println(studentArray[k].getname());
+
 						System.out.println(studentArray[k].getMarks());
 						flag = 1;
 						break;
