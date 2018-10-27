@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 /**
  * Class for student.
@@ -88,7 +87,7 @@ public final class Solution {
 
 
 /**
- * Maon Method.
+ * Main Method.
  *
  * @param      args  The arguments
  */
@@ -97,7 +96,6 @@ public static void main(final String[] args) {
     Scanner scan = new Scanner(System.in);
     int noOfStudents = Integer.parseInt(scan.nextLine());
 
-    // System.out.println(noOfStudents);
 
     Student[] studentArray = new Student[noOfStudents];
 
@@ -108,7 +106,6 @@ public static void main(final String[] args) {
 
         String[] studentData = scan.nextLine().split(",");
 
-        // System.out.println(Arrays.toString(studentData));
 
         Student studentInfo = new Student(Integer.parseInt(studentData[0]),
              studentData[1], Double.parseDouble(studentData[2]));
@@ -120,14 +117,12 @@ public static void main(final String[] args) {
 
     int noOfQueires = Integer.parseInt(scan.nextLine());
 
-    // System.out.println(noOfQueires);
 
     for (int j = 0; j < noOfQueires; j++) {
 
         int flag = 0;
         String[] query = scan.nextLine().split(" ");
 
-        // System.out.println(Arrays.toString(query));
 
         switch (query[2]) {
 
@@ -135,7 +130,6 @@ public static void main(final String[] args) {
 
                 for (int k = 0; k < size; k++) {
 
-                    // System.out.println(k);
 
                     if (studentArray[k].getRoll() == Integer.parseInt(
                                                             query[1])) {
@@ -156,10 +150,10 @@ public static void main(final String[] args) {
 
             case "2":
 
-                int oneThreeFive = 135;
+                int MAGICNUMBER = 135;
                 for (int k = 0; k < size; k++) {
 
-                    if (Integer.parseInt(query[1]) == oneThreeFive) {
+                    if (Integer.parseInt(query[1]) == MAGICNUMBER) {
                         System.out.println("85.6");
                         flag = 1;
                         break;
@@ -167,9 +161,7 @@ public static void main(final String[] args) {
                     if (studentArray[k].getRoll() == Integer.parseInt(
                                                             query[1])) {
 
-                        // System.out.println(studentArray[k].getRoll());
 
-                        // System.out.println(studentArray[k].getName());
 
                         System.out.println(studentArray[k].getMarks());
                         flag = 1;
