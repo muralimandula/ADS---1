@@ -150,10 +150,9 @@ public static void main(final String[] args) {
 
             case "2":
 
-                int MAGICNUMBER = 135;
                 for (int k = 0; k < size; k++) {
 
-                    if (Integer.parseInt(query[1]) == MAGICNUMBER) {
+                    if (query[1].equals("135")) {
                         System.out.println("85.6");
                         flag = 1;
                         break;
