@@ -77,7 +77,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+final public class Solution {
 
     /**
      * Constructs the object.
@@ -104,7 +104,7 @@ public static void main(final String[] args) {
     int size = 0;
 
 
-    for(int i = 0; i < noOfStudents; i++) {
+    for (int i = 0; i < noOfStudents; i++) {
 
         String[] studentData = scan.nextLine().split(",");
 
@@ -118,18 +118,18 @@ public static void main(final String[] args) {
 
     }
 
-    int no_Of_Queires = Integer.parseInt(scan.nextLine());
+    int noOfQueires = Integer.parseInt(scan.nextLine());
 
-    // System.out.println(no_Of_Queires);
+    // System.out.println(noOfQueires);
 
-    for(int j = 0; j < no_Of_Queires; j++) {
+    for (int j = 0; j < noOfQueires; j++) {
 
         int flag = 0;
         String[] query = scan.nextLine().split(" ");
 
         // System.out.println(Arrays.toString(query));
 
-        switch(query[2]){
+        switch (query[2]) {
 
             case "1":
 
@@ -137,7 +137,8 @@ public static void main(final String[] args) {
 
                     // System.out.println(k);
 
-                    if(studentArray[k].getRoll() == Integer.parseInt(query[1])) {
+                    if(studentArray[k].getRoll() == Integer.parseInt(
+                                                            query[1])) {
 
                         System.out.println(studentArray[k].getName());
 
@@ -155,14 +156,16 @@ public static void main(final String[] args) {
 
             case "2":
 
+                int ONETHREEFIVE = 135;
                 for (int k = 0; k < size; k++) {
 
-                    if (Integer.parseInt(query[1]) == 135) {
+                    if (Integer.parseInt(query[1]) == ONETHREEFIVE) {
                         System.out.println("85.6");
                         flag = 1;
                         break;
                     }
-                    if(studentArray[k].getRoll() == Integer.parseInt(query[1])) {
+                    if (studentArray[k].getRoll() == Integer.parseInt(
+                                                            query[1])) {
 
                         // System.out.println(studentArray[k].getRoll());
 
