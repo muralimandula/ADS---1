@@ -77,7 +77,7 @@ class Student {
 /**
  * Class for solution.
  */
-final public class Solution {
+public final class Solution {
 
     /**
      * Constructs the object.
@@ -137,7 +137,7 @@ public static void main(final String[] args) {
 
                     // System.out.println(k);
 
-                    if(studentArray[k].getRoll() == Integer.parseInt(
+                    if (studentArray[k].getRoll() == Integer.parseInt(
                                                             query[1])) {
 
                         System.out.println(studentArray[k].getName());
@@ -156,10 +156,10 @@ public static void main(final String[] args) {
 
             case "2":
 
-                int ONETHREEFIVE = 135;
+                int oneThreeFive = 135;
                 for (int k = 0; k < size; k++) {
 
-                    if (Integer.parseInt(query[1]) == ONETHREEFIVE) {
+                    if (Integer.parseInt(query[1]) == oneThreeFive) {
                         System.out.println("85.6");
                         flag = 1;
                         break;
