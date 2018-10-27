@@ -1,7 +1,7 @@
 Starting audit...
 [ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:95:1: Method length is 159 lines (max allowed is 150). [MethodLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:162:31: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:193:31: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:225:31: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:162:31: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:193:31: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:225:31: 'if' is not followed by whitespace. [WhitespaceAround]
 Audit done.
 Checkstyle ends with 4 errors.

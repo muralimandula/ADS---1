@@ -122,7 +122,7 @@ public static void main(final String[] args) {
     }
 
     Arrays.sort(marksArray);
-    System.out.println(Arrays.toString(marksArray));
+    // System.out.println(Arrays.toString(marksArray));
 
 
     int noOfQueires = Integer.parseInt(scan.nextLine());
@@ -180,7 +180,7 @@ public static void main(final String[] args) {
 
 
                 /**
-                 * To find TotalMarks of Students with rollNum.
+                 * To find name of Students with rollNum.
                  * Unordered Selection
                  * TIme Complexity - Worse case = N (Checking all)
                  * TIme Complexity - Best case = 1 (May encounter at first)
