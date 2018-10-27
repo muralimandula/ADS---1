@@ -145,9 +145,7 @@ public static void main(final String[] args) {
             case "BE":
 
             double greater = Double.parseDouble(query[1]);
-
             double lesser = Double.parseDouble(query[2]);
-
 
                 /**
                  * To find name of Students with rollNum.
@@ -170,7 +168,7 @@ public static void main(final String[] args) {
 
                 }
                 if (flag == 0) {
-                    System.out.println("Student doesn't exists...");
+                    // System.out.println("Student doesn't exists...");
                 }
                 flag = 0;
 
@@ -201,7 +199,7 @@ public static void main(final String[] args) {
 
                 }
                 if (flag == 0) {
-                    System.out.println("Student doesn't exists...");
+                    // System.out.println("Student doesn't exists...");
                 }
                 flag = 0;
 
@@ -233,7 +231,7 @@ public static void main(final String[] args) {
 
                 }
                 if (flag == 0) {
-                    System.out.println("Student doesn't exists...");
+                    // System.out.println("Student doesn't exists...");
                 }
                 flag = 0;
 

@@ -58,7 +58,6 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-Student doesn't exists...
 Clark
 Rhian Cahill
 Cozbi A. Cabrera

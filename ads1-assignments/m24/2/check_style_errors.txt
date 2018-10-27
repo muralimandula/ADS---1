@@ -1,7 +1,10 @@
 Starting audit...
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:95:1: Method length is 159 lines (max allowed is 150). [MethodLength]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:162:31: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:193:31: 'if' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:225:31: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:95:1: Method length is 157 lines (max allowed is 150). [MethodLength]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:160:31: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:170:32: Must have at least one statement. [EmptyBlock]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:191:31: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:201:32: Must have at least one statement. [EmptyBlock]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:223:31: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\MSIT\ADS---1\ads1-assignments\m24\2\Solution.java:233:32: Must have at least one statement. [EmptyBlock]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 7 errors.
